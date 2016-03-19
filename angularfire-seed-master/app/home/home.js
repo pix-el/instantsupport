@@ -3,10 +3,20 @@
 
   var app = angular.module('myApp.home', ['firebase.auth', 'firebase', 'firebase.utils', 'ngRoute']);
 
-  app.controller('HomeCtrl', ['$scope', 'fbutil', 'user', '$firebaseObject', 'FBURL', function ($scope, fbutil, user, $firebaseObject, FBURL) {
+  app.controller('HomeCtrl', ['$scope', 'fbutil', 'user', '$firebaseObject', 'FBURL','$location', function ($scope, fbutil, user, $firebaseObject, FBURL,$location) {
     $scope.syncedValue = $firebaseObject(fbutil.ref('syncedValue'));
-    $scope.user = user;
+    $scope.user = user;  
     $scope.FBURL = FBURL;
+      
+    $scope.openChat = function(){
+        $location.path('/chat');
+    }
+     
+    $scope.openAccountSettings = function(){
+        $location.path('/account');
+    }  
+      
+      
   }]);
 
   app.config(['$routeProvider', function ($routeProvider) {

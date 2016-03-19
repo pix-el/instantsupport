@@ -1,24 +1,59 @@
+<div class="logincontainer">
 
-<h2>Login Page</h2>
+    <h2>Infosys Service Desk</h2>
 
-<form>
-    <label>
-        <span>email</span>
-        <input type="text" ng-model="email" />
-    </label>
-    <label>
-        <span>password</span>
-        <input type="password" ng-model="pass" />
-    </label>
-    <label ng-cloak ng-show="createMode">
-        <span>confirm pass</span>
-        <input type="password" ng-model="confirm" />
-    </label>
-    <button ng-click="login(email, pass)" ng-hide="createMode">Log In</button>
-    <button ng-click="createMode = true" ng-hide="createMode">Register</button>
-    <button ng-cloak ng-show="createMode" ng-click="createAccount()">Create Account</button>
-    <button ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</button>
+    
+<div layout="column" ng-cloak>
+  <md-content layout-padding>
+    <form id="loginform" name="loginform">
+      <md-input-container class="md-block">
+        <label>Email</label>
+        <input required type="text" ng-model="email" name="useremail">
+        <div ng-messages="loginform.useremail.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+      <md-input-container class="md-block" ng-cloak ng-show="createMode">
+        <label>Username</label>
+        <input required type="text" ng-model="username" name="username">
+        <div ng-messages="loginform.username.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+    </md-input-container>
+    <md-input-container class="md-block">
+        <label>Password</label>
+        <input required type="password" ng-model="pass" name="userpassword">
+        <div ng-messages="loginform.userpassword.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>
+     <md-input-container class="md-block" ng-cloak ng-show="createMode">
+        <label>Confirm Password</label>
+        <input required type="password" ng-model="confirm" name="confirmpassword">
+        <div ng-messages="loginform.confirmpassword.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>   
+        
+        
+    <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+      <md-button class="md-raised" ng-click="login(email, pass)" ng-hide="createMode">Log In</md-button>
+      <md-button class="md-raised md-primary" ng-click="createMode = true" ng-hide="createMode">Register</md-button>
+      <md-button class="md-raised md-primary" ng-cloak ng-show="createMode" ng-click="createAccount()">Create Account</md-button>
+      <md-button class="md-raised md-warn" ng-cloak ng-show="createMode" ng-click="createMode = false">Cancel</md-button>
+    </section>    
+        
+        
+    <p ng-show="err" class="error">{{err}}</p>    
+        
+    </form>
+  </md-content>
+</div>
+ 
 
-    <p ng-show="err" class="error">{{err}}</p>
-</form>
+
+
+</div>
+   
+    
 

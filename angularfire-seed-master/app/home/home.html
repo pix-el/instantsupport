@@ -1,9 +1,104 @@
-<h2>Home</h2>
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Icon">
+          <md-tooltip>User</md-tooltip>
+          <md-icon class="md-default-theme" md-svg-icon="assets/images/infosys_logo.svg" style="width:200px;height:50px;"></md-icon>
+        </md-button>
+        <h2>
+          <span>Infosys Instant Service Desk</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button" aria-label="User">
+          <md-tooltip>Amin</md-tooltip>
+          <img src="assets/images/account.png" style="width:24px;height:24px;"/>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="Messages" ng-click="openAccountSettings()">
+          <md-tooltip>Messages</md-tooltip>
+          <img src="assets/images/settings.png" style="width:24px;height:24px;"/>
+        </md-button>
+   </div>
+</md-toolbar>
 
-<p class="status good" ng-show="loggedIn">Hello! You are logged in with id {{user.uid}}.</p>
-<p class="status" ng-hide="loggedIn">Welcome. You are not <a href="#/login">logged in</a></p>
 
-<input ng-model="syncedValue.$value" type="text" ng-change="syncedValue.$save()" /> <b>{{syncedValue.$value}}</b>
 
-<p>Open <a ng-href="{{FBURL}}/syncedValue" target="_blank">Forge</a> or a <a target="_blank" href="#/">new window</a> to see this input update in real time.</p>
+<div ng-cloak="" class="carddemoBasicUsage">
+  <md-content class="md-padding" layout-xs="column" layout="row">
+    <div flex-xs="" flex-gt-xs="50" layout="column">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Human Resources (HR)</span>
+			<img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQKAM2JdyIxk6bwIYXgtSSh6VqdfDfHyvfhGhlTJAYchJWeO-mkSg" class="md-media-lg card-media">
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button ng-click="openChat()">Create Request</md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Information Security Group(ISG)</span>
+			<img src="http://sarriamedia.com/wp-content/uploads/2015/05/SecurityIcons.png">	
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button ng-click="openChat()">Create Request</md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+    <div flex-xs="" flex-gt-xs="50" layout="column">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Information Systems (IS)</span>
+			<img src="http://www.justpip.com/website/images/software/systeminformation/icon.png">
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button ng-click="openChat()">Create Request</md-button>
+        </md-card-actions>
+      </md-card>
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Facilities</span>
+			<img src="http://www.hksyu.edu/counpsy/images/facilities_icon_up.png">
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button ng-click="openChat()">Create Request</md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+	    <div flex-xs="" flex-gt-xs="50" layout="column">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">IBPO</span>
+			<img src="http://a5.mzstatic.com/us/r30/Purple2/v4/32/8f/1a/328f1a99-6e33-3527-1b19-f4096b7f1141/icon175x175.png">	
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button ng-click="openChat()">Create Request</md-button>
+        </md-card-actions>
+      </md-card>
+      
+    <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">Computers & Communication Division (CCD)</span>
+			<img src="https://cmsframework.s3.amazonaws.com/carleton-cms-v1/assets/images/thumbs/techie.jpg">
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button ng-click="openChat()">Create Request</md-button>
+        </md-card-actions>
+      </md-card>        
+    </div>
+	
+  </md-content>
+</div>
+
+
 

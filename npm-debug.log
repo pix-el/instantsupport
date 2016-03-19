@@ -1,0 +1,63 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'firebase-tools' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.1
+4 verbose install initial load of C:\Users\nisrawat\AppData\Roaming\npm\package.json
+5 verbose readDependencies loading dependencies from C:\Users\nisrawat\AppData\Roaming\npm\package.json
+6 silly cache add args [ 'firebase-tools', null ]
+7 verbose cache add spec firebase-tools
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'firebase-tools',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'firebase-tools',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: 'latest',
+8 silly cache add   type: 'tag' }
+9 silly addNamed firebase-tools@latest
+10 verbose addNamed "latest" is being treated as a dist-tag for firebase-tools
+11 info addNameTag [ 'firebase-tools', 'latest' ]
+12 silly mapToRegistry name firebase-tools
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/firebase-tools
+16 verbose addNameTag registry:https://registry.npmjs.org/firebase-tools not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/firebase-tools
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 5:03:25 PM
+20 verbose request id b2e0e04765834622
+21 http request GET https://registry.npmjs.org/firebase-tools
+22 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 72.163.217.102:80
+23 info attempt registry request try #2 at 5:03:56 PM
+24 http request GET https://registry.npmjs.org/firebase-tools
+25 info retry will retry, error on last attempt: Error: tunneling socket could not be established, cause=connect ETIMEDOUT 72.163.217.102:80
+26 info attempt registry request try #3 at 5:05:17 PM
+27 http request GET https://registry.npmjs.org/firebase-tools
+28 verbose stack Error: tunneling socket could not be established, cause=connect ETIMEDOUT 72.163.217.102:80
+28 verbose stack     at ClientRequest.onError (C:\Program Files\nodejs\node_modules\npm\node_modules\request\node_modules\tunnel-agent\index.js:174:17)
+28 verbose stack     at ClientRequest.g (events.js:260:16)
+28 verbose stack     at emitOne (events.js:77:13)
+28 verbose stack     at ClientRequest.emit (events.js:169:7)
+28 verbose stack     at Socket.socketErrorListener (_http_client.js:256:9)
+28 verbose stack     at emitOne (events.js:77:13)
+28 verbose stack     at Socket.emit (events.js:169:7)
+28 verbose stack     at emitErrorNT (net.js:1255:8)
+28 verbose stack     at nextTickCallbackWith2Args (node.js:437:9)
+28 verbose stack     at process._tickCallback (node.js:351:17)
+29 verbose cwd C:\Users\nisrawat\InstantChatSupport
+30 error Windows_NT 6.1.7601
+31 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "firebase-tools"
+32 error node v4.3.1
+33 error npm  v2.14.12
+34 error code ECONNRESET
+35 error network tunneling socket could not be established, cause=connect ETIMEDOUT 72.163.217.102:80
+35 error network This is most likely not a problem with npm itself
+35 error network and is related to network connectivity.
+35 error network In most cases you are behind a proxy or have bad network settings.
+35 error network
+35 error network If you are behind a proxy, please make sure that the
+35 error network 'proxy' config is set properly.  See: 'npm help config'
+36 verbose exit [ 1, true ]

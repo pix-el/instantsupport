@@ -12,13 +12,15 @@ angular.module('myApp.login', ['firebase.utils', 'firebase.auth', 'ngRoute'])
     $scope.email = null;
     $scope.pass = null;
     $scope.confirm = null;
+    $scope.username = null;  
     $scope.createMode = false;
 
     $scope.login = function(email, pass) {
       $scope.err = null;
       Auth.$authWithPassword({ email: email, password: pass }, {rememberMe: true})
         .then(function(/* user */) {
-          $location.path('/account');
+          $location.path('/home');
+          localStorage.setItem("loggedInUsername", email.split('@')[0]);
         }, function(err) {
           $scope.err = errMessage(err);
         });
@@ -44,7 +46,7 @@ angular.module('myApp.login', ['firebase.utils', 'firebase.auth', 'ngRoute'])
           })
           .then(function(/* user */) {
             // redirect to the account page
-            $location.path('/account');
+            $location.path('/chat');
           }, function(err) {
             $scope.err = errMessage(err);
           });

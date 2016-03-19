@@ -7,12 +7,13 @@ angular.module('myApp', [
     'myApp.home',
     'myApp.account',
     'myApp.chat',
-    'myApp.login'
+    'myApp.login',
+    'ngMaterial'
   ])
   
   .config(['$routeProvider', function ($routeProvider) {
     $routeProvider.otherwise({
-      redirectTo: '/home'
+      redirectTo: '/login'
     });
   }])
   

@@ -1,10 +1,38 @@
 <h2>Chat</h2>
 
+
 <form>
   <input placeholder="Message..." ng-model="newMessage">
   <button type="submit" ng-click="addMessage(newMessage);newMessage = null;">send</button>
 </form>
 
-<ul id="messages" ng-show="messages.length">
-    <li ng-repeat="message in messages | reverse">{{message.text}}</li>
-</ul>
+<div ng-cloak layout-gt-sm="column" layout="column" id="chatwindow"> 
+    
+<div flex-gt-sm="60">
+    <md-toolbar layout="row" class="md-hue-2">
+      <div class="md-toolbar-tools">
+        <span>Normal</span>
+      </div>
+    </md-toolbar>
+    <md-content>
+        
+      <md-list ng-show="messages.length">
+        <md-list-item class="md-3-line md-long-text" ng-repeat="message in messages | reverse">
+          <img ng-src="http://www.gravatar.com/avatar" class="md-avatar" alt="{{ message.username }}" />
+          <div class="md-list-item-text">
+            <h3>{{ message.username}}</h3>
+            <p>
+                {{message.text}}
+            </p>
+          </div>
+        <md-divider></md-divider>
+       </md-list-item>
+          
+      </md-list>
+    
+      </md-content>
+  </div>
+
+</div>
+
+
